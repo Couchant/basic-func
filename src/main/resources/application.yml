@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: basic-func
+server:
+  port: 8088
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8090/eureka
+  instance:
+    hostname: localhost
+
+#Actuator信息配置
+info:
+  app:
+    name: basic-func
+  company:
+    name: springclouddemo
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@
